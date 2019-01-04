@@ -1,0 +1,25 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+<h:head>
+<title>Success page</title>
+<link href="./css/styles.css" rel="stylesheet" type="text/css"/>
+</h:head>
+<h:body>
+<h1 class="title">Welcome #{loginController.name}</h1>
+
+<h:form>
+	<h:inputTextarea value="#{messagesController.message}"/><br/>
+	<h:commandButton value="Post message" action="#{messagesController.readMessage}"/> 
+</h:form>
+
+<hr/>
+printing messages here
+<ul>
+	<ui:repeat var="m" value="#{messagesController.messagesList}">
+		<li>@#{m.time}: #{m.message}</li>
+	</ui:repeat>
+</ul>
+</h:body></html>
