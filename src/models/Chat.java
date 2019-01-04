@@ -4,10 +4,20 @@ public class Chat {
 
 	private String message;
 	private String time;
+	private String name;
 
-	public Chat(String message, String time) {
+	public Chat(String message, String time, String name) {
 		this.message = message;
 		this.time = time;
+		this.name = name;
+	}
+
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	public String getMessage() {

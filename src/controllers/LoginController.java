@@ -7,7 +7,7 @@ import javax.faces.bean.SessionScoped;
 
 import database.UsersDataBaseSimulator;
 
-@ManagedBean
+@ManagedBean(name="loginController")
 @SessionScoped
 public class LoginController implements Serializable{
 

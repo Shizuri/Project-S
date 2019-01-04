@@ -19,7 +19,7 @@
 printing messages here
 <ul>
 	<ui:repeat var="m" value="#{messagesController.messagesList}">
-		<li>@#{m.time}: #{m.message}</li>
+		<li><b>#{m.name}</b>@#{m.time} said: #{m.message}</li>
 	</ui:repeat>
 </ul>
 </h:body></html>
