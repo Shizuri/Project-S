@@ -36,11 +36,13 @@ public class MessagesController {
 	}
 
 	public String readMessage() {
-//		System.out.println(loginConroller.getName());
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
-		Chat chat = new Chat(message, LocalTime.now().format(dtf), loginConroller.getName());
-		MessagesDataBaseSimulator.MESSAGES.add(chat);
-		return "main-page";
+		if(!message.trim().isEmpty()) {
+			DateTimeFormatter dtf = DateTimeFormatter.ofPattern("HH:mm:ss");
+			Chat chat = new Chat(message.trim(), LocalTime.now().format(dtf), loginConroller.getName());
+			MessagesDataBaseSimulator.MESSAGES.add(chat);
+			this.message = "";
+		}
+		return "main-page?faces-redirect=true";
 	}
 
 	public List<Chat> getMessagesList() { // will not work if it does not start with get !!!

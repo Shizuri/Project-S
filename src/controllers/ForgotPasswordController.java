@@ -11,7 +11,7 @@ public class ForgotPasswordController {
 	
 	public String reset() {
 		if(UsersDataBaseSimulator.USERS.get(name) != null) {
-			if(UsersDataBaseSimulator.USERS.get(name).equals(name) && UsersDataBaseSimulator.USERS.get(name).getHint().equals(hint)) {
+			if(UsersDataBaseSimulator.USERS.get(name).getHint().equals(hint)) {
 				UsersDataBaseSimulator.USERS.get(name).setPassword(password);
 				return "index";
 			}

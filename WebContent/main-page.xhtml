@@ -11,7 +11,7 @@
 <h1 class="title">Welcome #{loginController.name}</h1>
 
 <h:form>
-	<h:inputTextarea value="#{messagesController.message}"/><br/>
+	<h:inputTextarea value="#{messagesController.message}" rows = "5" cols = "50"/><br/>
 	<h:commandButton value="Post message" action="#{messagesController.readMessage}"/> 
 </h:form>
 
@@ -19,8 +19,9 @@
 printing messages here
 <ul>
 	<ui:repeat var="m" value="#{messagesController.messagesList}">
-		<li><b>#{m.name}</b>@#{m.time} said: #{m.message}</li>
+		<li><b>#{m.name}</b>@#{m.time}: #{m.message}</li>
 	</ui:repeat>
 </ul>
-<a href="index.jsf">Back to login page.</a>
+<hr/>
+<a href="index.jsf">Back to login page</a>
 </h:body></html>

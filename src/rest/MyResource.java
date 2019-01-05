@@ -10,7 +10,7 @@ import javax.ws.rs.core.MediaType;
 import database.MessagesDataBaseSimulator;
 import models.Chat;
 
-@Path("test")
+@Path("chat")
 public class MyResource {
 	
 	@GET

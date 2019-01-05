@@ -33,7 +33,7 @@ public class LoginController implements Serializable{
 	public String login() {
 		if(UsersDataBaseSimulator.USERS.get(name) != null) {
 			if(UsersDataBaseSimulator.USERS.get(name).getPassword().equals(password)) {
-				return "main-page";
+				return "main-page?faces-redirect=true";
 			}
 		}
 		return "error";
