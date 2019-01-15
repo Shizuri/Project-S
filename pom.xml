@@ -61,12 +61,12 @@
 			<version>2.2.8-31</version>
 		</dependency>
 
-<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.bundles/jaxrs-ri -->
-<dependency>
-    <groupId>org.glassfish.jersey.bundles</groupId>
-    <artifactId>jaxrs-ri</artifactId>
-    <version>2.27</version>
-</dependency>
+		<!-- https://mvnrepository.com/artifact/org.glassfish.jersey.bundles/jaxrs-ri -->
+		<dependency>
+			<groupId>org.glassfish.jersey.bundles</groupId>
+			<artifactId>jaxrs-ri</artifactId>
+			<version>2.27</version>
+		</dependency>
 
 
 	</dependencies>

@@ -13,7 +13,7 @@
 	Please log in.<br/>
 	<h:panelGrid columns="2">
 		User name: <h:inputText value="#{loginController.name}"/>
-		Password: <h:inputText value="#{loginController.password}"/>
+		Password: <h:inputSecret value="#{loginController.password}"/>
 	</h:panelGrid>
 		<h:commandButton value="Login" action="#{loginController.login}"/>
 </h:form>
@@ -25,6 +25,6 @@
 	Forgot your password?
 	<a href="forgot-password.jsf">Reset your password</a>
 <hr/>
-	You can find the messages as JSONs at http://localhost:8080/Project-S/webapi/chat
+	You can find the messages as JSONs at https://project-s-basic.herokuapp.com/webapi/chat
 
 </h:body></html>
