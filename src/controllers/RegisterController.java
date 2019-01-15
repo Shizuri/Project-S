@@ -35,6 +35,9 @@ public class RegisterController {
 	}
 	
 	public String register() {
+		if(UsersDataBaseSimulator.USERS.containsKey(userName)) {
+			return "user-exists";
+		}
 		User user = new User(userName, password, hint);
 		UsersDataBaseSimulator.USERS.put(userName, user);
 		return "index";
